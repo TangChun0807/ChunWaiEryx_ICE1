@@ -19,7 +19,7 @@ public class CardTrick {
         Card[] magicHand = new Card[7];
         Random rand = new Random();
         Scanner input = new Scanner(System.in);
-      
+        boolean match = false;
         
         for (int i=0; i<magicHand.length; i++)
         {
@@ -43,9 +43,16 @@ public class CardTrick {
         System.out.print("0 - 3 where 0 = Hearts  , 1 = Diamonds , 2 = Spades , 3 = Clubs: ");
         int userSuit = input.nextInt();
         
-        boolean match = false;
         
-        for(Card c : magicHand){
+        
+       
+        
+        
+        
+        
+        
+        //Then report the result here
+          for(Card c : magicHand){
             if(c.getValue() == userInput && c.getSuit().equals(Card.SUITS[userSuit])){
                 match = true;
                 break;
@@ -57,12 +64,6 @@ public class CardTrick {
         else{
             System.out.println("Your card was not in the magic hand");
         }
-        
-        
-        
-        
-        
-        //Then report the result here
         // add one luckcard hard code 2,clubs
     }
     
