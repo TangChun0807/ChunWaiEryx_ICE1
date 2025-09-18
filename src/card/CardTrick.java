@@ -11,6 +11,7 @@ import java.util.Random;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author srinivsi
+ * Modifier Chun Wai Eryx Tang 
  */
 public class CardTrick {
     
@@ -18,10 +19,10 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         Random rand = new Random();
-        Scanner input = new Scanner(System.in);
-        boolean match = false;
+        Scanner input = new Scanner(System.in); // import scanner for getting user input 
+        boolean match = false; //create a boolean for tracking matches 
         
-        
+        //Draw 7 random cards
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
@@ -50,18 +51,20 @@ public class CardTrick {
         
        
         // add one luckcard hard code 2,clubs
-        Card luckyCard = new Card();
-        luckyCard.setValue(2);
-        luckyCard.setSuit("Clubs");
+        Card luckyCard = new Card(); // lucky card as new object 
+        luckyCard.setValue(2); // set lucky card to 2
+        luckyCard.setSuit("Clubs"); //set lucky card to clubs
 
-        boolean luckyMatch = false;
+        boolean luckyMatch = false; // tracking lack card 
+            // check that lucky card's value and suit match the magic hand
             for(Card c : magicHand){
             if(c.getValue() == luckyCard.getValue() && c.getSuit().equals(luckyCard.getSuit())){
                 luckyMatch = true;
                 break;
             }
         }
-
+            
+        //output the result 
         if(luckyMatch){
             System.out.print("Lucky card found! You win a bonus!");
     }
