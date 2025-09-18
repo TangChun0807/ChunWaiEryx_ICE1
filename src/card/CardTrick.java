@@ -73,7 +73,7 @@ public class CardTrick {
         boolean luckyMatch = false;
             for(Card c : magicHand){
             if(c.getValue() == luckyCard.getValue() && c.getSuit().equals(luckyCard.getSuit())){
-                match = true;
+                luckyMatch = true;
                 break;
             }
         }
